@@ -23,6 +23,7 @@ export const createPost = async ({ legend, local, data, urls }) => {
 // 🔄 Buscar todos os posts
 export const fetchPosts = async () => {
   const response = await axios.get(`${API_URL}/posts`);
+  console.log("aaa", response.data.posts)
   return response.data.posts;
 };
 
