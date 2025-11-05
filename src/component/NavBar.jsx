@@ -53,7 +53,7 @@ export default function NavBar({ onLongPressReels }) {
 
         <Link to="/profile">
           <img
-            src="../img/loading.png"
+            src="/loading.png"
             className="h-8 w-8 rounded-full object-cover"
           />
         </Link>
