@@ -29,7 +29,7 @@ export default function ReelsPage() {
 
   const fetchVideos = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/reels');
+      const response = await axios.get('https://conferential-yuko-semireflexively.ngrok-free.dev/reels');
       console.log(response.data)
       setVideos(response.data);
     } catch (error) {
@@ -80,7 +80,7 @@ export default function ReelsPage() {
     formData.append('local', newLocal);
 
     try {
-      await axios.post('http://localhost:3001/reels', formData);
+      await axios.post('https://conferential-yuko-semireflexively.ngrok-free.dev/reels', formData);
       setNewDescription('');
       setNewData('');
       setNewLocal('')
@@ -95,7 +95,7 @@ export default function ReelsPage() {
   // ❌ Deletar vídeo
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/reels/${selectedVideoId}`);
+      await axios.delete(`https://conferential-yuko-semireflexively.ngrok-free.dev/${selectedVideoId}`);
       fetchVideos();
       setShowDeleteModal(false);
     } catch (err) {
