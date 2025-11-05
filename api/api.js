@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://conferential-yuko-semireflexively.ngrok-free.dev';
 
 // 🔄 Função para enviar imagem e retornar a URL
 export const uploadImage = async (file) => {
