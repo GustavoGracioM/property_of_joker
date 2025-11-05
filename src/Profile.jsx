@@ -68,7 +68,7 @@ export default function Profile() {
     return (
         <>
             {isLoading && <LoadingScreen />}
-            {!isLoading && posts.length >= 1 && (
+            {!isLoading && posts?.length >= 1 && (
             <>
                 <header className='flex justify-between items-center p-4'>
                     <div className='flex gap-2 items-center'>
@@ -87,7 +87,7 @@ export default function Profile() {
                         <strong>Isa Gu</strong>
                         <div className='flex justify-between'>
                             <div>
-                                <h1><strong>{posts.length}</strong></h1>
+                                <h1><strong>{posts?.length}</strong></h1>
                                 <h1>post</h1>
                             </div>
                             <div>

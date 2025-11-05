@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </header>
           <div className="mb-20">
-            {posts.length >=1 && posts.map((post) => (<InstagramCardTest post={post} />))}
+            {posts?.length >=1 && posts.map((post) => (<InstagramCardTest post={post} />))}
           </div>
         </>
       )}

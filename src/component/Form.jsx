@@ -29,7 +29,7 @@ export default function FormCreate({ legend, setLegend, local, setLocal, data, s
           className="w-full bg-transparent text-gray-800 placeholder-gray-400 resize-none p-3 focus:outline-none"
         />
         <div className="absolute bottom-2 right-3 text-gray-400 text-xs">
-          {legend.length}/200
+          {!legend ? 0 : legend?.length}/200
         </div>
       </div>
 

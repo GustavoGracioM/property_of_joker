@@ -62,7 +62,7 @@ export default function Crop() {
     <div className="App">
       <HeaderCreate 
         create={create} 
-        image={image.length > 0 && image[0].dataURL} 
+        image={image?.length > 0 && image[0].dataURL} 
         setCreate={setCreate} 
         handleSubmit={handleSubmit} 
         dialogOpen={dialogOpen} 
@@ -74,14 +74,14 @@ export default function Crop() {
         <ImageCropper
           open={dialogOpen}
           setCroppedAreaPixels={setCroppedAreaPixels}
-          image={image.length > 0 && image[0].dataURL}
+          image={image?.length > 0 && image[0].dataURL}
           containerStyle={{
             position: "relative",
             aspectRatio: '9 / 12',
             background: "#333"
           }}
         />
-        {!dialogOpen && croppedImage.length === 0 && (
+        {!dialogOpen && croppedImage?.length === 0 && (
           <ImageRequest
             onChange={(file) => {
               const reader = new FileReader();
@@ -94,7 +94,7 @@ export default function Crop() {
             }}
           />
         )}
-        {!dialogOpen && croppedImage.length >= 1 && (
+        {!dialogOpen && croppedImage?.length >= 1 && (
           <MyGallery images={croppedImage} />
         )}
         {!dialogOpen && (

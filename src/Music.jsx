@@ -139,7 +139,7 @@ export default function TodoList() {
         </div>
 
         <div className="bg-white rounded-xl shadow-md overflow-hidden">
-          {todos.length === 0 ? (
+          {todos?.length === 0 ? (
             <p className="text-center p-6 text-gray-500">Nenhuma tarefa encontrada.</p>
           ) : isOrdering ? (
             <DragDropContext onDragEnd={handleDragEnd}>
