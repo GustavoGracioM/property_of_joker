@@ -12,7 +12,7 @@ const InstagramCard = ({legend, local, data, urls}) => {
       {/* Heading */}
         <div className="flex flex-row justify-between items-center mt-2 mx-4">
             <div className="flex flex-row items-center gap-4">
-              <img src="../img/loading.png" className="h-8 w-8 rounded-full object-cover" />
+              <img src="/loading.png" className="h-8 w-8 rounded-full object-cover" />
               <div className='flex flex-col'>
                 <div>
                   <strong className='p-0 m-0'>Zabella_Gusttavo</strong> 
@@ -43,7 +43,7 @@ const InstagramCard = ({legend, local, data, urls}) => {
           <div className='flex flex-row gap-2 items-center'>
             <img 
               className='w-5 h-5 rounded-full'
-              src="../img/loading.png"
+              src="/loading.png"
             />
             <p className='text-xs'>Liked by <strong>Usernanme </strong>and <strong> other 1294</strong></p>
           </div>

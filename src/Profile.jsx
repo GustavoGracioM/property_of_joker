@@ -80,7 +80,7 @@ export default function Profile() {
                 </header>
                 <div className='flex w-full pl-4 pt-2 items-center'>
                     <img 
-                        src="../img/loading.png"
+                        src="/loading.png"
                         className="w-21 h-21 rounded-full object-cover"
                     />
                     <div className='w-[70%] ml-4 p-2'>

@@ -125,7 +125,7 @@ export default function ReelsPage() {
             <div className="absolute bottom-10 left-4 text-white mb-10">
               <div className="flex items-center gap-2">
                 <img
-                  src="../img/loading.png"
+                  src="/loading.png"
                   className="h-10 w-10 rounded-full object-cover"
                 />
                 <div>

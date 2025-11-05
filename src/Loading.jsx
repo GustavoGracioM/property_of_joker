@@ -32,7 +32,7 @@ const Loading = () => {
         : 'opacity-0'
     }`}>
       <div>
-        <img class="rounded-full w-120 h-120 object-cover border-4 border-white shadow-xl animate-spin-slow" src="../img/loading.png" alt="image description" />
+        <img class="rounded-full w-120 h-120 object-cover border-4 border-white shadow-xl animate-spin-slow" src="/loading.png" alt="image description" />
         <figcaption className="mt-2 text-3xl text-white font-semibold text-center animate-pulse">Carregando...</figcaption>
       </div>
   </figure>)
