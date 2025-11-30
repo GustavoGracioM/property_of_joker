@@ -29,7 +29,7 @@ export default function TodoList() {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/todo');
+      const response = await axios.get('https://bc-afbq.onrender.com/todo');
       setTodos(response.data.todo);
     } catch (error) {
       console.error('Erro ao buscar tarefas:', error);
@@ -38,7 +38,7 @@ export default function TodoList() {
 
   const handleCheck = async (id, check) => {
     try {
-      await axios.put(`http://localhost:3001/todo/${id}`, { check: !check });
+      await axios.put(`https://bc-afbq.onrender.com/todo/${id}`, { check: !check });
       setTodos((prev) =>
         prev.map((todo) =>
           todo.id === id ? { ...todo, check: !check } : todo
@@ -51,7 +51,7 @@ export default function TodoList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/todo/${id}`);
+      await axios.delete(`https://bc-afbq.onrender.com/todo/${id}`);
       await fetchTodos();
       setDeleteTarget(null);
     } catch (error) {
@@ -61,7 +61,7 @@ export default function TodoList() {
 
   const handleAdd = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/todo', {
+      const response = await axios.post('https://bc-afbq.onrender.com/todo', {
         description: newDescription,
         data: newDate
       });
