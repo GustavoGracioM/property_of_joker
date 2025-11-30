@@ -36,16 +36,16 @@ export default function TodoList() {
     }
   };
 
-  const handleCheck = async (id, check) => {
+  const handleCheck = async (id, done) => {
     try {
-      await axios.put(`https://bc-afbq.onrender.com/todo/${id}`, { check: !check });
+      await axios.put(`https://bc-afbq.onrender.com/todo/${id}`, { done: !done });
       setTodos((prev) =>
         prev.map((todo) =>
-          todo.id === id ? { ...todo, check: !check } : todo
+          todo.id === id ? { ...todo, done: !done } : todo
         )
       );
     } catch (error) {
-      console.error('Erro ao atualizar check:', error);
+      console.error('Erro ao atualizar done:', error);
     }
   };
 
@@ -189,12 +189,12 @@ export default function TodoList() {
                   <div className="flex items-center gap-4">
                     <input
                       type="checkbox"
-                      checked={todo.check}
-                      onChange={() => handleCheck(todo.id, todo.check)}
+                      checked={todo.done}
+                      onChange={() => handleCheck(todo.id, todo.done)}
                       className="w-5 h-5 accent-green-600 cursor-pointer"
                     />
                     <div>
-                      <p className={`text-lg ${todo.check ? 'line-through text-gray-400' : ''}`}>
+                      <p className={`text-lg ${todo.done ? 'line-through text-gray-400' : ''}`}>
                         {todo.description}
                       </p>
                       <p className="text-sm text-gray-500">📅 {formatDate(todo.data)}</p>
