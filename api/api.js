@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const API_URL = 'https://conferential-yuko-semireflexively.ngrok-free.dev';
+const API_URL = 'https://bc-afbq.onrender.com';
 
 // 🔄 Função para enviar imagem e retornar a URL
 export const uploadImage = async (file) => {
   const formData = new FormData();
 formData.append('imagem', file); // 👈 nome precisa bater com upload.single('imagem')
 
-const response = await axios.post('https://conferential-yuko-semireflexively.ngrok-free.dev', formData, {
+const response = await axios.post('https://bc-afbq.onrender.com', formData, {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
