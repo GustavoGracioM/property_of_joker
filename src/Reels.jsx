@@ -95,7 +95,7 @@ export default function ReelsPage() {
   // ❌ Deletar vídeo
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://bc-afbq.onrender.com/${selectedVideoId}`);
+      await axios.delete(`https://bc-afbq.onrender.com/reels/${selectedVideoId}`);
       fetchVideos();
       setShowDeleteModal(false);
     } catch (err) {

@@ -7,11 +7,12 @@ export const uploadImage = async (file) => {
   const formData = new FormData();
 formData.append('imagem', file); // 👈 nome precisa bater com upload.single('imagem')
 
-const response = await axios.post('https://conferential-yuko-semireflexively.ngrok-free.dev', formData, {
+const response = await axios.post(`${API_URL}/upload`, formData, {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
 });
+console.log(response.data.path)
   return response.data;
 };
 

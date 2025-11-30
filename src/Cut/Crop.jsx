@@ -50,7 +50,7 @@ export default function Crop() {
   const sendPost = async (imagePromise) => {
     const file = await imagePromise;
     const { path } = await uploadImage(file);
-    setCroppedImage([...croppedImage, { original: `${BACKEND}${path}` }]);
+    setCroppedImage([...croppedImage, { original: path }]);
     setDialogOpen(false);
     setCreate(false)
   }
