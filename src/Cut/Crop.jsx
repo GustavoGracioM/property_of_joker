@@ -9,7 +9,7 @@ import ImageCropper from "../component/ImageCrooper";
 import LoadingScreen from '../Loading/LoadingScreen'
 import { useNavigate } from "react-router";
 
-const BACKEND = 'https://conferential-yuko-semireflexively.ngrok-free.dev';
+const BACKEND = 'https://bc-afbq.onrender.com';
 
 
 export default function Crop() {
