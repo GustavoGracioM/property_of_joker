@@ -19,7 +19,7 @@ export default function SingleReels() {
 
   const fetchReels = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/reels/${id}`);
+      const response = await axios.get(`https://bc-afbq.onrender.com/reels/${id}`);
       setReel(response.data.reel);
     } catch (error) {
       console.error("Erro ao buscar vídeo:", error);
@@ -38,7 +38,7 @@ export default function SingleReels() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/reels/${id}`);
+      await axios.delete(`https://bc-afbq.onrender.com/reels/${id}`);
       setShowDeleteModal(false);
       navigate(-1);
     } catch (err) {
