@@ -60,7 +60,7 @@ export default function ReelsPage() {
             <div className='flex items-center gap-2'>
               <img src="../img/loading.png" className="h-10 w-10 rounded-full object-cover" />
               <div>
-                <strong className="font-bold">@Zabella_Gusttavo</strong>
+                <strong className="font-bold">@gu.isa666</strong>
                 <h1 className='text-slate-200 text-base m-0 p-0'>Local</h1>
               </div>
             </div>

@@ -73,7 +73,7 @@ export default function Profile() {
                 <header className='flex justify-between items-center p-4'>
                     <div className='flex gap-2 items-center'>
                         <Lock />
-                        <strong className='text-2xl'>zabella_gusttavo</strong>
+                        <strong className='text-2xl'>gu.isa666</strong>
                         <ChevronDown />
                     </div>
                     <Menu />
@@ -102,7 +102,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div className='pl-4 pb-3 pt-1'>
-                    Um viado e uma sapatão
+                    Um viado e uma sapatão 🖤
                 </div>
                 <div className='pb-16'>
                     <div className='p-2'>
@@ -119,29 +119,38 @@ export default function Profile() {
                         </div>
                     </div>
                     <ProfileSection activeTab={activeTab} setActiveTab={setActiveTab} />
-                    <div className="grid grid-cols-3 gap-[1px] bg-white">
-                    {activeTab === 'posts' ? posts.map((post, index) => (
-                        <div key={index} className="relative w-full pt-[165%] bg-black overflow-hidden">
-                        <img
-                            src={post.images[0].url}
-                            alt={`post-${index}`}
-                            onClick={() => navigate(`/post/${post.id}`)}
-                            className="absolute top-0 left-0 w-full h-full object-cover"
-                        />
+                    {activeTab === 'posts' ?
+                        <div className="grid grid-cols-3 gap-[1px] bg-white">
+                            {posts.map((post, index) => (
+                            <div key={index} className="relative w-full pt-[165%] bg-black overflow-hidden">
+                                <img
+                                    src={post.images[0].url}
+                                    alt={`post-${index}`}
+                                    onClick={() => navigate(`/post/${post.id}`)}
+                                    className="absolute top-0 left-0 w-full h-full object-cover"
+                                />
                         </div>
-                    )): activeTab === 'reels' ? reels.map((reel, index) => (
-                        <div key={index} className="relative w-full pt-[165%] bg-black overflow-hidden">
-                            <video 
-                                src={reel.url} 
-                                className='absolute top-0 left-0 w-full h-full object-cover'
-                                onClick={() => navigate(`/reels/${reel.id}`)} />
-                        </div>
-                    )): <h1>nada</h1>}
+                    ))}
                     </div>
-                </div>
+                    : activeTab === 'reels' ? 
+                        <div className="grid grid-cols-3 gap-[1px] bg-white">
+                            {reels.map((reel, index) => (
+                            <div key={index} className="relative w-full pt-[165%] bg-black overflow-hidden">
+                                <video 
+                                    src={reel.url} 
+                                    className='absolute top-0 left-0 w-full h-full object-cover'
+                                    onClick={() => navigate(`/reels/${reel.id}`)} />
+                            </div>
+                            ))
+                            }
+                        </div>
+                    : <div> <img src='/brutal.jpg' /> </div>}
+                    </div>
             </>
             )}
             <Navbar />
         </>
     )
 }
+
+

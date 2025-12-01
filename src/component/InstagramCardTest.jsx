@@ -41,7 +41,7 @@ export default function InstagramCardTest({post}) {
           <img src="/loading.png" className="h-8 w-8 rounded-full object-cover" />
           <div className='flex flex-col'>
             <div>
-              <strong className='p-0 m-0'>Zabella_Gusttavo</strong> 
+              <strong className='p-0 m-0'>gu.isa666</strong> 
             </div>
             <strong className='text-slate-600 text-xs m-0 p-0'>{post.local}</strong>
           </div>
